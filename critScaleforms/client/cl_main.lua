@@ -149,6 +149,7 @@ AddEventHandler("cS.MidsizeBanner", function(_title, subtitle, _bannerColor, _wa
     Citizen.CreateThread(function()
         Citizen.Wait((_waitTime * 1000) - 1000)
         Scaleform.CallFunction(scale, false, "SHARD_ANIM_OUT", 2, 0.3, true)
+        PlaySoundFrontend(-1, 'Shard_Disappear', 'GTAO_FM_Events_Soundset', false)
         Citizen.Wait(1000)
         showMidBanner = false
     end)
